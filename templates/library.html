@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Meme Library</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+  Meme Library Goes Here<br>
+  {% for meme in memes %}
+      <div class="singlememe">
+        <div>
+          {{meme.image_id}}<br>
+          {{meme.top_line}}<br>
+          {{meme.bottom_line}}<br>
+          <p> created by {{meme.author}} on {{meme.date_str}} </p><br>
+        </div>
+      </div>
+  {% endfor %}
+</body>
+</html>
